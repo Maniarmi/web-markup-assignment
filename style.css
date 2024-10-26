@@ -1,0 +1,777 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+body {
+    background-color: #f0d5ba;
+    width: 100%;
+}
+
+/* header _______________ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0d5ba;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-container h2{
+    font-size: 2.5rem;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+}
+
+.contact-button button {
+    color: #fff;
+    background-color: #ff6600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.contact-button button a{
+    color: #fff;
+}
+
+.contact-button button:hover {
+    background-color: #6c2f1a;
+}
+
+nav{
+    display: flex;
+    background-color: #ff6600;
+    justify-content: space-evenly; 
+}
+
+nav a{
+    color: #fff;
+    transition: background-color 0.5s;
+    padding: 7px 15px; 
+}
+
+nav a:hover{
+    background-color: #6c2f1a;
+}
+
+.active{
+    background-color: #6c2f1a;
+}
+
+/* main (home-page)__________________ */
+
+.welcome-image {
+    background-image:url("../img/Home-page-first-pic.jpg") ;
+    width: 85%;
+    height: 550px;
+    background-repeat: no-repeat;
+    margin: 20px auto ;
+    background-size: cover;
+    position: relative;
+}
+
+.welcome-image h2{
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    right: 5%;
+    bottom: 50%;
+}
+
+.hero{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.hero-text{
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.hero-text p{
+    text-align: justify;
+}
+
+.categories{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box {
+    
+    width: 200px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    transition: width 0.5s;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.category:nth-child(1) .img-box{
+    background: url("../img/breakfast/Japanese-souffle-pancake-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category:nth-child(2) .img-box{
+    background: url("../img/lunch/Teriyaki-Chicken-Wings-SpendWithPennies-6.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category:nth-child(3) .img-box{
+    background: url("../img/dinner/chicken-fajita-rice-bowl-14-500x500.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category:nth-child(4) .img-box{
+    background: url("../img/vegan/fresh-spring-rolls-with-tofu-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category:nth-child(5) .img-box{
+    background: url("../img/drink/banana-berry-kefir-smoothie.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.img-box h3{
+    color: #000;
+    position: absolute; 
+    font-size: 30px;
+    bottom: 0;
+    left: 80px;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+
+}
+
+.img-box:hover{
+    width: 300px;
+    cursor: pointer;
+    
+}
+
+.img-box:hover h3{
+    opacity: 1;
+    bottom: 25px;
+}
+
+
+/* main (breakfast)(lunch)(dinner)_____________ */
+.recipes-intro {
+    text-align: center;
+    padding: 40px;
+    font-size: 90px;
+}
+
+.recipes-intro h2 {
+    font-size: 32px;
+    color: #FF6600;
+}
+
+.recipes-intro p {
+    font-size: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Meal Type Buttons */
+.meal-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.meal-buttons a{
+    color: #fff;
+}
+
+h3{
+    font-style: italic;
+    font-size: 30px;
+}
+
+.meal-buttons button {
+    text-decoration: none;
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    transition: background-color 0.5s;
+}
+
+.meal-buttons button:hover {
+    background-color: #6c2f1a;
+}
+
+.recipes-list {
+    
+    width: 70%;
+    margin-left: 60px;
+    padding: 40px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.recipe-item {
+    display: flex;
+    margin: 20px 0;
+    max-width: 800px;
+}
+
+.recipe-item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all 1.5s ease;
+}
+
+.recipe-item img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-info h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.recipe-info p {
+    margin: 10px 0;
+}
+
+.recipe-info a {
+    align-self: flex-start;
+    background-color: #FF6600;
+    color: #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.recipe-info a:hover {
+    background-color: #6c2f1a;
+}
+
+/* main(vegan)__________________ */
+.vegan-intro {
+    text-align: center;
+    padding: 40px;
+    font-size: 90px;
+}
+
+.vegan-intro h2 {
+    font-size: 32px;
+    color: #FF6600;
+}
+
+.vegan-intro p {
+    font-size: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.vegan-intro ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Vegan Button Section */
+.vegan-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.vegan-button button {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+    
+}
+
+.vegan-button span {
+    font-size: 40px;
+    color: #FF6600;
+}
+
+/* Vegan Recipes List */
+.vegan-recipes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    padding: 20px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+    position: relative;
+}
+
+.recipe-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recipe-items img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 1.5s ease;
+}
+
+.recipe-items img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.recipe-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.recipe-info a {
+    align-self: center;
+    background-color: #FF6600;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+/* main(drinks)__________________ */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 2.1em;
+    color: #FF6600;
+}
+
+.recipe.info p{
+    font-size: 50px;
+}
+
+.smoothie-section p {
+    text-align: center;
+    justify-content: center;
+    margin: 20px 250px; 
+    font-size: 15px;
+    text-align: justify;
+}
+
+.recipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 300px;
+    background-color: rgb(247, 198, 149);
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(97, 62, 10, 0.979);
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe-img img {
+    width: 100%;
+    max-width: 150px;
+    height: 80%;
+    border-radius: 50%;
+    margin: 20px;
+    transition: all 1.5s ease;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.recipe-img img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.recipe-info {
+    padding: 20px;
+    display: flex;
+}
+
+.recipe-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.recipe h2{
+    font-size: 20px;
+}
+
+button.more-btn {
+    background-color: #ff6600;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button.more-btn:hover {
+    background-color: #6c2f1a;
+}
+
+/* main(articles)___________________ */
+
+.article {
+    margin-bottom: 40px;
+}
+
+.article h2 {
+    font-size: 1.5em;
+    margin: 50px 170px;
+    margin-bottom: 10px;
+}
+
+.article a {
+    color: #FF6600;
+    text-decoration: underline;
+    margin-left: 650px;
+    font-size: 20px;
+}
+
+.article a:hover{
+    color: #6c2f1a;
+}
+
+.article p {
+    margin: 10px 70px;
+    font-size: 25px;
+}
+
+.article-img img {
+    width: 80%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.article-img3 img{
+    width: 80%;
+    height: 1000px;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+/* main(contact)______________________ */
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.contact-section p {
+    margin: 20px 60px;
+    line-height: 1.6;
+    font-size: 23px;
+}
+
+.contact-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    margin: 40px auto;
+    border: 2px solid #f47a21;
+    background-color: #fbe0cc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-form h2{
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.mandatory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+    font-size: 0.9em;
+    color: #555;
+    
+}
+
+.submit-button {
+    background-color: #f47a21;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2em;
+    display: block;
+    margin-top: 10px;
+}
+
+.thanks{
+    font-size: 40px;
+    color: #FF6600;
+    text-align: center;
+    height: 10vh;
+    margin: 400px;
+    
+}
+
+/* footer_____________________ */
+footer{
+    width: 100%;
+    background-color: #ff6600;
+    overflow-x: hidden;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img{
+    width: 80px;
+    height: 70px;
+}
+
+.footer-menu{
+    width: 100%;
+}
+
+
+.footer-menu ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.footer-menu ul li a{
+    color: #000;
+    transition: color 0.5s;
+}
+
+.footer-menu ul li a:hover{
+    color: #fff;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px 10px;
+    text-decoration: none;
+    color: #000;
+    overflow-x: hidden;
+    gap: 25px;
+}
+
+
+@media (max-width: 1200px) {
+    .welcome-image h2 {
+      font-size: 30px;
+    }
+    .img-box {
+      width: 150px;
+      height: 450px;
+    }
+    .img-box:hover {
+      width: 250px;
+    }
+}
+  
+@media (max-width: 992px) {
+    .welcome-image h2 {
+      font-size: 25px;
+    }
+    .welcome-image {
+      width: 80%;
+    }
+    .img-box {
+      width: 120px;
+      height: 450px;
+    }
+    .img-box:hover {
+      width: 200px;
+    }
+}
+  
+ @media (max-width: 768px) {
+    .welcome-image h2 {
+      font-size: 25px;
+    }
+    .welcome-image {
+      width: 80%;
+    }
+    .img-box {
+      width: 90px;
+      height: 450px;
+    }
+    .footer-menu ul {
+      font-size: 17px;
+      gap: 20px;
+    }
+    .img-box:hover {
+      width: 170px;
+    }
+  
+    .vegan-recipes {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .recipe-item {
+      flex-direction: column;
+    }
+}
+  
+@media (max-width: 576px) {
+    nav {
+      flex-direction: column;
+    }
+    .logo-container h2 {
+      font-size: 20px;
+    }
+    .welcome-image h2 {
+      font-size: 20px;
+    }
+    .img-box {
+      width: 70px;
+      height: 400px;
+    }
+    .footer-menu ul {
+      font-size: 14px;
+      gap: 15px;
+    }
+    .img-box:hover {
+      width: 150px;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
